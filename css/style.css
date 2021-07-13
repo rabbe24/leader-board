@@ -1,0 +1,279 @@
+
+@import url(utilities.css);
+
+:root{
+    --primary: #562EFF;
+    --secondary: #9F9F9F;
+    --pure: #FFFFFF;
+    --dark: #000000;
+    --ternary: #ED6B4F;
+    --yellow: #FFC014;
+    --light: #A2A2A2;
+    --time: #e9c3b9;
+    --main-back: #F3F1FF;
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+   background-color: var(--main-back); 
+}
+
+.container{
+    max-width: 950px;
+    margin: 0 auto;
+   
+}
+
+#header{
+background-color: var(--primary);
+padding: 0 0.5rem;
+
+}
+.main-nav{
+padding: 1rem 0;
+}
+.branding{
+column-gap: 2rem;
+}
+.branding img{
+    width: 110px;
+    height: 51px;
+}
+.navbar{
+    column-gap: 1.5rem;
+}
+.nav__link{
+    margin: auto;
+}
+.nav__link a{
+    color: var(--pure);
+    padding-left: 2rem;
+    text-decoration: none;
+}
+.nav__profile{
+    text-decoration: none;
+    margin-left: 0.5rem;
+}
+.main{
+padding: 2rem 0;
+}
+.content{
+    flex-direction: column;
+    padding: 0 2rem;
+     background-color: var(--pure);
+}
+.section__title{
+color: var(--primary);
+font-size: 2rem;
+padding: 2rem 0;
+}
+.player{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+column-gap: 2rem;
+row-gap: 2rem;
+padding-bottom: 3rem;
+}
+.player__list{
+display: flex;
+column-gap: 2rem;
+
+}
+.player__img img{
+    width: 100px;
+    height: 100px;
+
+}
+.player__name{
+color: var(--dark);
+font-size: 1rem;
+margin: auto 0;
+}
+hr{
+    /* border: 1px solid #D1D1D1; */
+    margin: 0 2rem;
+    
+}
+.blog{
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+row-gap: 1rem;
+column-gap: 2rem;
+}
+.blog__card{
+display: flex;
+column-gap: 1rem;
+
+}
+.blog__img{
+flex: 1;
+}
+.blog__img img{
+    width: 177px;
+    height: 117px;
+    border-radius: 0.5rem;
+}
+.blog__content{
+
+   flex: 1; 
+}
+.blog__content h4{
+
+    
+}
+.blog__content p{
+    padding-top: 0.5rem;
+    color: var(--secondary);
+    
+}
+.blog__writer{
+
+}
+.blog__content a{
+    color: var(--primary);
+}
+.big-footer{
+    padding: 0 2rem;
+     background-color: var(--pure);
+}
+.course{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    row-gap: 1.5rem;
+    padding-bottom: 5rem;
+}
+.course__card{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 15px 15px 30px var(--light);
+    border-radius: 1rem;
+}
+.course__img{
+margin: 1rem;
+}
+.course__img img{
+    width: 224px;
+    height: 104px;
+}
+.course__content{
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+
+}
+.course__content h4{
+padding-top: 0.4rem;
+}
+.course__content p{
+padding: 0.3rem 0;
+ color: var(--ternary);
+ font-weight: 500;
+}
+.course__rating{
+    margin: auto 0;
+}
+.rating__num{
+color: var(--light);
+font-weight: bold;
+padding: 0 0.3rem;
+}
+
+.fa-star{
+    font-size: 0.8rem;
+}
+
+.fa-star.filled{
+    color: var(--yellow);
+}
+
+.fa-star.empty{
+    color: var(--light);
+}
+
+.time{
+    background-color: var(--time);
+    border-radius: 1rem;
+    padding: 0.2rem 0.4rem;
+    color: var(--ternary);
+    font-weight: bold;
+}
+
+
+@media all and (min-width: 1024px) and (max-width: 1280px) { }
+ 
+@media all and (min-width: 768px) and (max-width: 1024px) { 
+   
+    .player__list{
+        flex-direction: column;  
+    }
+
+    .course{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+
+    .player{
+        grid-template-columns: repeat(3, 1fr);
+    }
+     .player__list{
+        flex-direction: column;  
+    }
+    .content{
+    /* padding: 0 0.5rem; */
+    }
+      .blog{
+        grid-template-columns: 1fr;
+    }
+    .course{
+        grid-template-columns: repeat(2, 1fr);
+    }
+} 
+
+ 
+@media all and (max-width: 480px) {
+    .branding{
+        display: none;
+    }
+    .nav__profile{
+        display: none;
+    }
+    .player{
+        grid-template-columns: repeat(2, 1fr);
+    }
+     .player__list{
+        flex-direction: column;
+        
+    }
+    .content{
+    padding: 0 0.5rem;
+    }
+      .blog{
+        grid-template-columns: 1fr;
+    }
+    .blog__img img{
+    width: 150px;
+    height: 100px;
+    }
+
+    .course{
+        grid-template-columns:1fr;
+    }
+    .big-footer{
+    padding: 0 0.5rem;
+    }
+ }
+
+
+ 
+
+
+
